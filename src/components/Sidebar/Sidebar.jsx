@@ -23,7 +23,7 @@ const categories = [
 const demoCategories = [
   { label: "Comedy", value: "comedy" },
   { label: "Action", value: "action" },
-  { label: "Horror", value: "Horror" },
+  { label: "Horror", value: "horror" },
   { label: "Animation", value: "animation" },
 ];
 
@@ -40,7 +40,7 @@ const Sidebar = ({ setMobileOpen }) => {
       <Link to="/" className={classes.imageLink}>
         <img
           className={classes.image}
-          src={theme.palette.mode === "light" ? redLogo : blueLogo}
+          src={theme.palette.mode === "light" ? blueLogo : redLogo}
           alt="Filmpire logo"
         />
       </Link>
@@ -48,7 +48,7 @@ const Sidebar = ({ setMobileOpen }) => {
 
       <List>
         <ListSubheader>Categories</ListSubheader>
-        {demoCategories.map(({ label, value }) => (
+        {categories.map(({ label, value }) => (
           <Link key={value} className={classes.links} to="/">
             <ListItem onClick={() => {}} button>
               {/* <ListItemIcon>
@@ -66,7 +66,7 @@ const Sidebar = ({ setMobileOpen }) => {
       <Divider />
       <List>
         <ListSubheader>Genres</ListSubheader>
-        {categories.map(({ label, value }) => (
+        {demoCategories.map(({ label, value }) => (
           <Link key={value} className={classes.links} to="/">
             <ListItem onClick={() => {}} button>
               {/* <ListItemIcon>
