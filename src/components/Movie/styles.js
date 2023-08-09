@@ -20,7 +20,11 @@ export default makeStyles((theme) => ({
   image: {
     borderRadius: "20px",
     height: "300px",
+    width: "200px",
     marginBottom: "10px",
+    [theme.breakpoints.down("sm")]: {
+      padding: "12px",
+    },
     "&:hover": {
       transform: "scale(1.05)",
     },
