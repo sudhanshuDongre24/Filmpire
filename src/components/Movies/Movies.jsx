@@ -9,7 +9,7 @@ import {
 import { selectGenreOrCategory } from "../../features/currentGenreOrCategory";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useGetMoviesQuery } from "../../services/TMDB";
-import { MovieList } from "..";
+import { Movie, MovieList } from "..";
 
 const Movies = () => {
   const [page, setPage] = useState(1);
