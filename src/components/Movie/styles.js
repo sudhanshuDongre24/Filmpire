@@ -22,6 +22,7 @@ export default makeStyles((theme) => ({
     height: "300px",
     width: "200px",
     marginBottom: "10px",
+    paddingRight: "4px",
     [theme.breakpoints.down("sm")]: {
       padding: "12px",
     },
