@@ -10,6 +10,7 @@ import {
   Movies,
   NavBar,
   Profile,
+  ActorCredits,
 } from "./components";
 
 const App = () => {
@@ -25,6 +26,11 @@ const App = () => {
           <Route exact path="/actors/:id" element={<Actors />}></Route>
           <Route exact path="/" element={<Movies />}></Route>
           <Route exact path="/profile/:id" element={<Profile />}></Route>
+          <Route
+            exact
+            path="/actors/movie_credits/:id"
+            element={<ActorCredits />}
+          ></Route>
         </Routes>
       </main>
     </div>
