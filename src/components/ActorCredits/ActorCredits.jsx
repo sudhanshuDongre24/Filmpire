@@ -51,10 +51,13 @@ const ActorCredits = () => {
     );
   }
 
+  console.log(data);
   const movie = [...data.cast];
   movie.sort((a, b) => {
     return b.popularity - a.popularity;
   });
+
+  console.log(movie);
 
   return (
     <>
@@ -98,7 +101,7 @@ const ActorCredits = () => {
                   </Link>
                   <ListItemText
                     style={{ marginTop: "0" }}
-                    primary={i?.original_title}
+                    primary={i?.title}
                     secondary={i?.character}
                   />
                 </ListItem>
@@ -111,7 +114,7 @@ const ActorCredits = () => {
               <Divider style={{ borderWidth: "1.5px" }} />
             </div>
           ))
-          .slice(0, 15)}
+          .slice(0, 35)}
       </div>
     </>
   );

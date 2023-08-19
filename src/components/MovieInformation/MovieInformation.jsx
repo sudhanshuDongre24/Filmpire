@@ -51,7 +51,6 @@ const MovieInformation = () => {
 
   const addToWatchList = () => {};
 
-  console.log(recommendations);
   if (isFetching) {
     return (
       <Box display="flex" justifyContent="center" alignItems="center">

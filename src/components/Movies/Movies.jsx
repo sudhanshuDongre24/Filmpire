@@ -4,6 +4,7 @@ import {
   CircularProgress,
   useMediaQuery,
   Typography,
+  Pagination,
 } from "@mui/material";
 
 import { selectGenreOrCategory } from "../../features/currentGenreOrCategory";
