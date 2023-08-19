@@ -4,13 +4,12 @@ import {
   CircularProgress,
   useMediaQuery,
   Typography,
-  Pagination,
 } from "@mui/material";
 
 import { selectGenreOrCategory } from "../../features/currentGenreOrCategory";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useGetMoviesQuery } from "../../services/TMDB";
-import { Movie, MovieList } from "..";
+import { Pagination, MovieList } from "..";
 
 const Movies = () => {
   const [page, setPage] = useState(1);
@@ -22,6 +21,10 @@ const Movies = () => {
     page,
     searchQuery,
   });
+
+  const lg = useMediaQuery((theme) => theme.breakpoints.only("lg"));
+
+  const numberOfMovie = lg ? 16 : 18;
 
   if (isFetching) {
     return (
@@ -47,7 +50,12 @@ const Movies = () => {
 
   return (
     <div>
-      <MovieList movies={data} />
+      <MovieList movies={data} numberOfMovie={numberOfMovie} />
+      <Pagination
+        currentPage={page}
+        setPage={setPage}
+        totalPages={data.total_pages}
+      />
     </div>
   );
 };
