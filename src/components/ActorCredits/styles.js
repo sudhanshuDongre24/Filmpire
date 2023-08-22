@@ -6,7 +6,9 @@ export default makeStyles((theme) => ({
     borderRadius: "50%",
     height: "450px",
     objectFit: "cover",
-    border: "3px solid #1976d2",
+
+    border:
+      theme.palette.mode === "dark" ? "3px solid #a5a5a5" : "3px solid #1976d2",
   },
   mainList: {
     display: "flex",
