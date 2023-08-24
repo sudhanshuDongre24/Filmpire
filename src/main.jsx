@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 
 import ToggleColorMode from "./utils/ToggleColorMode";
 
-import App from "./App";
+import App from "./app";
 import "./index.css";
 import store from "./app/store";
 
