@@ -10,3 +10,4 @@ export { default as Search } from "./Search/Search";
 export { default as ActorCredits } from "./ActorCredits/ActorCredits";
 export { default as Pagination } from "./Pagination/Pagination";
 export { default as RatedCards } from "./RatedCards/RatedCards";
+export { default as FeaturedMovie } from "./FeaturedMovie/FeaturedMovie";
