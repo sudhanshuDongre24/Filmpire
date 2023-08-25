@@ -54,7 +54,7 @@ const Sidebar = ({ setMobileOpen }) => {
       <Divider />
 
       <List>
-        <ListSubheader>Categories</ListSubheader>
+        <ListSubheader className={classes.color}>Categories</ListSubheader>
         {categories.map(({ label, value }) => (
           <Link key={value} className={classes.links} to="/">
             <ListItem
@@ -77,7 +77,7 @@ const Sidebar = ({ setMobileOpen }) => {
       </List>
       <Divider />
       <List>
-        <ListSubheader>Genres</ListSubheader>
+        <ListSubheader className={classes.color}>Genres</ListSubheader>
         {isFetching ? (
           <Box display="flex" justifyContent="center">
             <CircularProgress />
